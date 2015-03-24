@@ -1,10 +1,10 @@
 #!/bin/bash
 
-SUITE=precise
+SUITE=trusty
 TARGET=${SUITE}
 
 sudo debootstrap \
-    --components=main,universe,multiverse \
+    --components=main,universe,multiverse,restricted \
     ${SUITE} ${TARGET} \
-    http://za.archive.ubuntu.com/ubuntu
+    http://za2.archive.ubuntu.com/ubuntu
 
