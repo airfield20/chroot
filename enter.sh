@@ -1,6 +1,10 @@
 #!/bin/bash
 
-SUITE=trusty
+if [ -z "$1" ]; then
+    SUITE=trusty 
+else
+    SUITE=$1
+fi
 
 MAP="/proc /sys /dev /run /home/gijs"
 

@@ -1,6 +1,11 @@
 #!/bin/bash
 
-SUITE=trusty
+if [ -z "$1" ]; then
+    SUITE=trusty
+else
+    SUITE=$1
+fi
+
 TARGET=${SUITE}
 
 sudo debootstrap \
