@@ -1,12 +1,12 @@
 #!/bin/bash
 
 if [ -z "$1" ]; then
-    SUITE=trusty 
+    SUITE=xenial 
 else
     SUITE=$1
 fi
 
-MAP="/proc /sys /dev /run /home/gijs"
+MAP="/proc /sys /dev /run /home/gijs /build /kern"
 
 for i in $MAP; do
     sudo mount -o bind $i ${SUITE}$i
